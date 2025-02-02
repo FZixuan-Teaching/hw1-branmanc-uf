@@ -1,6 +1,7 @@
 from hw1_simulate import *
+import sys
 
-def main(rs_seed:int = 628):
+def main(rs_seed:int = 314):
   if (type(rs_seed) != int):
     raise TypeError("rs_seed must be an integer")
 
@@ -98,6 +99,6 @@ def main(rs_seed:int = 628):
 if __name__ == "__main__":
   import argparse
   parser = argparse.ArgumentParser(description='Run the blood donation simulation')
-  parser.add_argument('--rs_seed', type=int, default=628, help='Random seed for simulation')
+  parser.add_argument('--rs_seed', type=int, default=314, help='Random seed for simulation')
   args = parser.parse_args()
   main(args.rs_seed)
